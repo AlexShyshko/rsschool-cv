@@ -10,3 +10,19 @@ img {
   border: solid 1px black;
   float: right;
 }
+.footernav {
+  display: flex;
+  flex-wrap: wrap;
+  color: #f7f7f7;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.acc {
+  margin-right: 200px;
+}
+.link {
+  margin-right: 200px;
+}
+.time {
+  margin-right: 50px;
+}
