@@ -1,0 +1,12 @@
+body {
+  background: honeydew;
+}
+div {
+  width: fit-content;
+  margin: auto;
+}
+img {
+  width: 10em;
+  border: solid 1px black;
+  float: right;
+}
