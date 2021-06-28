@@ -14,3 +14,7 @@ const showCurrentDate = (lala) => {
 const date = 'January 29';
 showCurrentDate(date);
 ```
+
+- **Work experience**: RSSchool cource "JavaScript Development": to be continued.
+- **Education**: 2006 - 2009 Minsk state trade colledge. Technologist of catering.
+- **English**: A2. In 2018 i have worked 3 months as a SCUBA instructor in Jordan.
