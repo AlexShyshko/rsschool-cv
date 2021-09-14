@@ -1,0 +1,337 @@
+/*fonts*/
+
+@font-face {
+  font-family: TitilliumWeb;
+  src: url(../assets/fonts/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+  font-family: Inconsolata;
+  src: url(../assets/fonts/Inconsolata-Medium.ttf);
+}
+
+@font-face {
+  font-family: Niconne;
+  src: url(../assets/fonts/Niconne-Regular.ttf);
+}
+
+/*scoll*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*container*/
+
+.body {
+  background-color: lightgray;
+}
+
+.wrapper {
+  width: 75vw;
+  margin: 0 auto;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  background-color: lightgray;
+}
+
+.header-wrapper,
+.footer-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+/* ! Horizontal centering */
+
+/* .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.header-wrapper,
+.main,
+.footer-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* ! Horizontal centering */
+
+/*header*/
+
+.header {
+  display: flex;
+  height: fit-content;
+  margin: auto 0;
+}
+
+.photo-and-contacts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: center;
+  padding-top: 1vmin;
+  border-radius: 3vmin;
+  width: 30%;
+  height: fit-content;
+  background-color: whitesmoke;
+}
+
+.photo {
+  object-fit: contain;
+  width: 90%;
+  margin: 0 auto;
+  border: 1vmin solid orange;
+  border-radius: 5vmin;
+}
+
+.name {
+  width: min-content;
+}
+
+.name,
+.menu h2 {
+  margin: 1vh auto;
+  font-family: TitilliumWeb;
+  font-size: 5vmin;
+  text-transform: uppercase;
+}
+
+.contacts ul,
+.menu ul {
+  padding: 0;
+}
+
+.contacts ul,
+.contacts h2 {
+  padding-left: 1vmin;
+}
+
+.contacts h2,
+.main h3 {
+  font-family: TitilliumWeb;
+  font-size: 1.5em;
+  width: fit-content;
+}
+
+.contacts h2::after,
+.menu h2::after,
+.menu li::after,
+.main h3::after,
+.course::after {
+  content: "";
+  display: block;
+  height: 0.5vh;
+  width: 100%;
+  background: orange;
+}
+
+.contacts li,
+.menu li {
+  list-style-type: none;
+}
+
+.contacts a,
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.contacts p,
+.menu a,
+.main h4 {
+  font-family: Inconsolata;
+  font-size: 1em;
+  font-style: normal;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding-left: 1vw;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.menu li {
+  font-weight: bold;
+  padding-right: 2.5vw;
+}
+
+.course {
+  font-family: TitilliumWeb;
+  font-size: 4vmin;
+  width: fit-content;
+  margin: 5vmin auto;
+}
+
+.link-certificate {
+  display: flex;
+}
+
+.certificate {
+  margin: 0 auto;
+  width: 80%;
+}
+
+/*main*/
+
+.main section,
+.footer section {
+  margin-top: 5vmin;
+}
+
+.main h3 {
+  margin-bottom: 0;
+  padding-left: 1vmin;
+  padding-right: 1vmin;
+  border-radius: 1vmin;
+  background-color: whitesmoke;
+}
+
+.main ul {
+  list-style: none;
+}
+
+.main li {
+  margin-bottom: 1vh;
+}
+
+.orange-square {
+  color: orange;
+  display: inline-block;
+  width: 1em;
+  font-size: 1.5vmax;
+  margin-left: -1.5vmax;
+}
+
+.header-with-orange-square {
+  display: inline;
+}
+
+code {
+  max-width: fit-content;
+}
+
+.main #projects img {
+  width: 30%;
+  margin-bottom: 3vh;
+}
+
+/*footer*/
+
+.footer {
+  display: flex;
+  height: fit-content;
+  margin: auto 0;
+}
+
+.footer h3 {
+  font-family: Niconne;
+  font-size: 3em;
+  margin: 0 auto;
+}
+
+.date-year {
+  font-family: Niconne;
+  font-size: 3em;
+}
+
+.footer h4 {
+  font-family: Niconne;
+  font-size: 2em;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date-year {
+  align-self: flex-end;
+}
+
+.about-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vmin;
+}
+
+.video-container {
+  width: 70%;
+}
+
+.video-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/*adaptive*/
+
+@media (max-width: 640px) {
+  .header-wrapper {
+    height: auto;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .photo-and-contacts,
+  .menu {
+    min-width: 100%;
+  }
+
+  .menu h2 {
+    display: none;
+  }
+
+  .menu h3 {
+    display: flex;
+    width: min-content;
+    font-family: TitilliumWeb;
+    font-size: 2em;
+    justify-content: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    background-color: whitesmoke;
+  }
+
+  .menu a {
+    font-size: 1.5em;
+  }
+
+  .certificate {
+    width: 100%;
+  }
+
+  .main #projects img {
+    width: 100%;
+  }
+
+  .video-container {
+    width: 100%;
+  }
+}

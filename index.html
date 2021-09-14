@@ -4,65 +4,191 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>CV</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Aliaksei Shyshko CV</title>
 </head>
-<body>
-    <div>
-        <img src="photo.jpg" alt="photo">
-        <section>
-        <header>
-            <h1 style="text-align: center;">CV Aliaksei Shyshko</h1>
-        </header>
-    <ol>
-        <li><b>Contacts:</b>
-            <ul>
-                <li>+375291249122</li>
-                <li><address style="font-style: normal;">E-mail:shish1988@mail.ru</address></li>
-                <li>GitHub account: AlexShyshko</li>
-            </ul></li>
-                <li><b>Information:</b> 2006 - present: working in public catering as a cook. I haven't experience in IT but i wish to start teaching "JavaScript" cource with RSSchool.</li>
-        <li><b>Skills:</b>
-            <ul>
-                <li>Done acquaintance with Markdown, HTML, CSS.</li>
-                <li>Began to learn JavaScript.</li>
-            </ul></li>
-        <li><b>Example of code:</b> Block below is just pasted as an example of HTML formatting.
-    <pre>
-<code>const showCurrentDate = (lala) => {
-console.log(`Today is: ${lala}`);
-};
-              
-const date = 'January 29';
-showCurrentDate(date);</code>
-            </pre>
-        </li>
-        <li><b>Work experience:</b> RSSchool cource "JavaScript Development": to be continued.</li>
-        <li><b>Education:</b> 2006 - 2009 Minsk state trade colledge. Technologist of catering.</li>
-        <li><b>English:</b> A2. In 2018 i have worked 3 months as a SCUBA instructor in Jordan.</li>
-    </ol>
-</section>
-    <footer>
-        <nav>
-            <ul class="footernav">
-                <li class="acc">
-                    <h2>
-                        <a href="https://github.com/AlexShyshko">My GitHub account</a>
-                    </h2>
-                </li>
-                <li class="link">
-                    <a href="https://rs.school/js/">
-                        <img src="logorsschool.svg" class="logo" alt="logorsschool.svg">
+<body class="body">
+    <div class="wrapper">
+        <div class="header-wrapper">
+            <header class="header">
+                <section class="photo-and-contacts">
+                    <img class="photo" src="assets/img/photo.jpg" alt="photo">
+                    <h1 class="name">Aliaksei Shyshko</h1>
+                    <div class="contacts">
+                        <h2>Contacts:</h2>
+                        <ul>
+                            <li>
+                                <address>
+                                    <p><b>Location:</b> Belarus, Minsk</p>
+                                </address>
+                            </li>
+                            <li>
+                                <a href="tel:+375291249122"><p><b>Phone:</b> +375 29 124-91-22</p></a>
+                            </li>
+                            <li>
+                                <a href="mailto:shish1988@mail.ru"><p><b>E-mail:</b> shish1988@mail.ru</p></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/AlexShyshko" target="_blank"><p><b>GitHub account:</b> AlexShyshko</p></a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="menu" id="menu">
+                    <h2>Menu</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#education">Education</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#languages">Foreign languages</a></li>
+                            <li><a href="#code">Example of code</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#experience">Work experience</a></li>
+                            <li><a href="#about">About me</a></li>
+                        </ul>
+                    </nav>
+                    <h3 class="course">The last completed course</h3>
+                    <a class="link-certificate" href="assets/img/certificate.jpg" target="_blank">
+                        <img class="certificate" src="assets/img/certificate.jpg" alt="certificate">
                     </a>
-                </li>
-                <li class="time">
-                    <h3>
-                        <time style="color: black;">2021</time>
-                    </h3>
-                </li>
-            </ul>
-        </nav>
-    </footer>
-</div>
+                </section>
+            </header>
+        </div>
+        <main class="main">
+            <section id="education">
+                <h3>Education:</h3>
+                <h4>2006 - 2009: Minsk state trade colledge. Technologist of catering.</h4>
+                <h4>2021: RSScool. Course "JS/FE PRE-SCHOOL (JAVASCRIPT)".</h4>
+            </section>
+            <section id="skills">
+                <h3>Skills:</h3>
+                <ul>
+                    <li>
+                        <span class="orange-square">&#9632;</span><h4 class="header-with-orange-square">HTML5</h4>
+                    </li>
+                    <li>
+                        <span class="orange-square">&#9632;</span><h4 class="header-with-orange-square">CSS3</h4>
+                    </li>
+                    <li>
+                        <span class="orange-square">&#9632;</span><h4 class="header-with-orange-square">JavaScript</h4>
+                    </li>
+                </ul>
+            </section>
+            <section id="languages">
+                <h3>Foreign languages:</h3>
+                <h4>English: A2.</h4>
+            </section>
+            <section id="code">
+                <h3>Example of code:</h3>
+                <h4>Here is my solution of "The Deca Tree" task from <a href="https://www.codewars.com/kata/5acf710f46b4cb00810001e2" target="_blank">codewars.com</a></h4>
+                <pre>
+                    <code>
+                        function tree(trunks) {
+                            this.trunks = trunks;
+                            this.branches = trunks * 10;
+                            this.twigs = trunks * 100;
+                            this.leaves = trunks * 1000;
+                          
+                            this.chopTrunk = function(n) {
+                              if (this.trunks > n) {
+                                this.trunks =  this.trunks - n;
+                              } else {
+                                this.trunks = 0;
+                              }
+                              this.chopBranch(n * 10);
+                            }
+                          
+                              this.chopBranch = function(n) {
+                                if (this.branches > n) {
+                                  this.branches =  this.branches - n;
+                                } else {
+                                  this.branches = 0;
+                                }
+                                this.chopTwig(n * 10);
+                            }
+                          
+                            this.chopTwig = function(n) {
+                              if (this.twigs > n) {
+                                this.twigs =  this.twigs - n;
+                              } else {
+                                this.twigs = 0;
+                              }
+                              this.chopLeaf(n * 10);
+                            }
+                          
+                            this.chopLeaf = function(n) {
+                              if (this.leaves > n) {
+                                this.leaves = this.leaves - n;
+                              } else {
+                                this.leaves = 0;
+                              }
+                            }
+                          
+                            this.describe = function() {
+                              return `This tree has ${this.trunks} trunks, ${this.branches} branches, ${this.twigs} twigs and ${this.leaves} leaves.`;
+                            }
+                        }
+                    </code>
+                </pre>
+                <h4>More examples of code on my <a href="https://www.codewars.com/users/AlexShyshko/completed_solutions" target="_blank">codewars</a> and <a href="https://github.com/AlexShyshko?tab=repositories" target="_blank">GitHub</a> accounts.</h4>
+            </section>
+            <section id="projects">
+                <h3>Projects:</h3>
+                <ul>
+                    <li>
+                        <span class="orange-square">&#9632;</span><h4 class="header-with-orange-square">Museum.</h4>
+                        <h4>My first education project made in the "JS/FE PRE-SCHOOL (JAVASCRIPT)" course. Not adaptive Louvre museum web-site.</h4>
+                        <h4>Technologies have been used: HTML5, CSS3, JS.</h4>
+                        <a href="https://louvre-not-adaptive.netlify.app" target="_blank">
+                            <img src="assets/img/louvre-not-adaptive.jpg" alt="louvre">
+                        </a>
+                    </li>
+                    <li>
+                        <span class="orange-square">&#9632;</span><h4 class="header-with-orange-square">Custom video player.</h4>
+                        <h4>Player for the next version of Louvre museum web-site.</h4>
+                        <h4>Technologies have been used: HTML5, CSS3, JS.</h4>
+                        <a href="https://custom-video-player-louvre.netlify.app" target="_blank">
+                            <img src="assets/img/custom-video-player-louvre.jpg" alt="player">
+                        </a>
+                    </li>
+                    <li>
+                        <span class="orange-square">&#9632;</span><h4 class="header-with-orange-square">Vertical slider.</h4>
+                        <h4>Education project demonstrating infinite slider skill & my own dive club "Sea Horse".</h4>
+                        <h4>Technologies have been used: HTML5, CSS3, JS.</h4>
+                        <a href="https://vertical-slider-dive-club-sea-horse.netlify.app" target="_blank">
+                            <img src="assets/img/vertical-slider-dive-club-sea-horse.jpg" alt="slider">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section id="experience">
+                <h3>Work experience:</h3>
+                <h4>Will be filled soon...</h4>
+            </section>
+        </main>
+        <div class="footer-wrapper">
+            <footer class="footer">
+                <section id="about">
+                    <div class="about">
+                        <h3>About me</h3>
+                        <h4>Since 2006 till present time i work in public catering as a cook. In 2018 i have worked 3 months as a diving instructor in Jordan. I haven't experience in IT yet but i hope to change it. Now i'm studying in RSSchool course "JS / FRONT-END".</h4>
+                        <time class="date-year">2021</time>
+                    </div>
+                    <div class="about-video">
+                        <div class="video-container">
+                            <div class="video-wrapper">
+                                <iframe class="video" src="https://www.youtube.com/embed/7mGwAeZC2II" title="YouTube video player" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </footer>
+        </div>
+    </div>
+    <link rel="stylesheet" href="assets/highlight/styles/base16/darcula.min.css">
+    <script src="assets/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="js/script.js"></script>
 </body>
 </html>
