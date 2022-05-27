@@ -1,1 +1,1 @@
-https://alexshyshko.github.io/rsschool-cv/
+https://alexshyshko-cv.netlify.app/
